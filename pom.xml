@@ -25,14 +25,25 @@
       <artifactId>beam-runners-direct-java</artifactId>
       <version>2.57.0</version>
     </dependency>
+    <!-- ! ISSUE: Causing  Hadoop writable exception-->
+    <!--    <dependency>-->
+    <!--      <groupId>org.apache.beam</groupId>-->
+    <!--      <artifactId>beam-sdks-java-io-parquet</artifactId>-->
+    <!--      <version>2.57.0</version>-->
+    <!--    </dependency>-->
+    <!--    <dependency>-->
+    <!--      <groupId>org.apache.beam</groupId>-->
+    <!--      <artifactId>beam-sdks-java-io-amazon-web-services</artifactId>-->
+    <!--      <version>2.57.0</version>-->
+    <!--    </dependency>-->
     <dependency>
-      <groupId>org.apache.beam</groupId>
-      <artifactId>beam-sdks-java-io-parquet</artifactId>
-      <version>2.57.0</version>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>8.0.33</version>
     </dependency>
     <dependency>
       <groupId>org.apache.beam</groupId>
-      <artifactId>beam-sdks-java-io-amazon-web-services</artifactId>
+      <artifactId>beam-sdks-java-io-jdbc</artifactId>
       <version>2.57.0</version>
     </dependency>
   </dependencies>

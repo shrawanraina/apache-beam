@@ -1,13 +1,12 @@
 package section6;
 
-import org.apache.avro.generic.*;
-import org.apache.beam.sdk.transforms.*;
+// import org.apache.avro.generic.*;
 
-public class PrintElementFn extends SimpleFunction<GenericRecord, Void> {
+public class PrintElementFn /*extends SimpleFunction<GenericRecord, Void>*/ {
 
-  @Override
-  public Void apply(GenericRecord input) {
-    // TODO: Print the elements of the GenericRecord
-    return null;
-  }
+  // @Override
+  // public Void apply(GenericRecord input) {
+  //   // TODO: Print the elements of the GenericRecord
+  //   return null;
+  // }
 }
