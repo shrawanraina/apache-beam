@@ -8,5 +8,4 @@ public class PrintElementFn extends DoFn<Integer, Void> {
   public void processElement(@Element Integer input) {
     System.out.println(input);
   }
-
 }

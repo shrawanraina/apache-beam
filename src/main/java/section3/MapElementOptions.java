@@ -11,5 +11,4 @@ public interface MapElementOptions extends PipelineOptions {
   void setOutputFilePath(String filePath);
 
   String getOutputFilePath();
-
 }

@@ -8,16 +8,16 @@ import org.apache.beam.sdk.values.*;
 public class LocalFileWithOptionsExample {
 
   public static void main(String[] args) {
-    LocalFileOptions options = PipelineOptionsFactory.fromArgs(args).withValidation()
-        .as(LocalFileOptions.class);
+    LocalFileOptions options =
+        PipelineOptionsFactory.fromArgs(args).withValidation().as(LocalFileOptions.class);
     Pipeline p = Pipeline.create(options);
 
-    PCollection<String> output = p.apply(
-        TextIO.read().from(options.getInputFilePath()));
+    PCollection<String> output = p.apply(TextIO.read().from(options.getInputFilePath()));
     output.apply(
-        TextIO.write().to(options.getOutputFilePath())
-            .withNumShards(1).withSuffix(options.getExtension()));
+        TextIO.write()
+            .to(options.getOutputFilePath())
+            .withNumShards(1)
+            .withSuffix(options.getExtension()));
     p.run();
   }
-
 }

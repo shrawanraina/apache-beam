@@ -5,8 +5,7 @@ import org.apache.beam.sdk.transforms.Partition.*;
 class PartitionByCity implements PartitionFn<String> {
 
   @Override
-  public int partitionFor(String elem,
-      int numPartitions) {
+  public int partitionFor(String elem, int numPartitions) {
     String[] row = elem.split(",");
     if ("Los Angeles".equals(row[5])) {
       return 0;

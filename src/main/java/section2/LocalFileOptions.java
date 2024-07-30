@@ -15,5 +15,4 @@ public interface LocalFileOptions extends PipelineOptions {
   void setExtension(String ext);
 
   String getExtension();
-
 }

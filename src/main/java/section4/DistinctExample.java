@@ -1,6 +1,6 @@
 package section4;
 
-import common.*;
+import common.Constants;
 import org.apache.beam.sdk.*;
 import org.apache.beam.sdk.io.*;
 import org.apache.beam.sdk.transforms.*;
@@ -11,11 +11,13 @@ public class DistinctExample {
 
   public static void main(String[] args) {
     Pipeline p = Pipeline.create();
-    PCollection<String> fruitPColl = p.apply(
-        TextIO.read().from(Constants.BASE_PATH + "common/fruits-with-duplicate.csv"));
+    PCollection<String> fruitPColl =
+        p.apply(TextIO.read().from(Constants.BASE_PATH + "data/fruits-with-duplicate.csv"));
     PCollection<String> distinctFruitPColl = fruitPColl.apply(Distinct.<String>create());
     distinctFruitPColl.apply(
-        TextIO.write().to(Constants.BASE_PATH + "section4/output-distinct").withNumShards(1)
+        TextIO.write()
+            .to(Constants.BASE_PATH + "section4/output-distinct")
+            .withNumShards(1)
             .withSuffix(Constants.SUFFIX_CSV));
     p.run();
   }

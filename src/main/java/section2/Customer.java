@@ -21,7 +21,6 @@ public class Customer implements Serializable {
     this.id = id;
   }
 
-
   public String getName() {
     return name;
   }
@@ -29,6 +28,4 @@ public class Customer implements Serializable {
   public void setName(String name) {
     this.name = name;
   }
-
-
 }
